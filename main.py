@@ -19,6 +19,8 @@ if __name__ == "__main__":
             Speak.read_speaker()
         if Choice == "A":
             Conf.create_conference()
+        if Choice == "S":
+            Conf.delete_conference()
 
 
         if Choice == "Q":

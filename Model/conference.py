@@ -24,7 +24,11 @@ class Conference():
         self.choice.close_connection()
 
     def delete_conference(self):
-        pass
+        self.choice.initialize_connection()
+        self.titre = input("Quel est le titre de la conférence ? ")
+        self.choice.cursor.execute("DELETE FROM Conference WHERE titre=%s;",(self.titre,))
+        self.choice.connection.commit()
+        self.choice.close_connection()
 
     def read_conference(self):
-        pass
+       pass
