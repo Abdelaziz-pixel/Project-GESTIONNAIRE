@@ -22,7 +22,12 @@ class Speaker():
 
 
     def delete_speaker(self):
-        pass
+        self.choice.initialize_connection()
+        self.prenom = input("Quel est votre prénom ? ")
+        self.nom = input("Quel est votre nom ? ")
+        self.choice.cursor.execute("DELETE FROM Speaker WHERE prenom=%s AND nom=%s;",(self.prenom,self.nom))
+        self.choice.connection.commit()
+        self.choice.close_connection()
 
     def read_speaker(self):
         pass
