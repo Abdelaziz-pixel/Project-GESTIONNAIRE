@@ -21,8 +21,8 @@ if __name__ == "__main__":
             Conf.create_conference()
         if Choice == "S":
             Conf.delete_conference()
-
-
+        if Choice == "B":
+            Conf.read_conference()
         if Choice == "Q":
             print("À bientôt pour un prochain évènement ;-)")
             exit()

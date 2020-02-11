@@ -34,5 +34,4 @@ class Speaker():
         self.choice.cursor.execute("SELECT * FROM Speaker;")
         speaker = self.choice.cursor.fetchall()
         self.choice.close_connection
-        for key, value in enumerate(speaker):
-            speaker[key] = Speaker(value)
+        print(speaker)

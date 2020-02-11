@@ -31,4 +31,8 @@ class Conference():
         self.choice.close_connection()
 
     def read_conference(self):
-       pass
+        self.choice.initialize_connection()
+        self.choice.cursor.execute("SELECT * FROM Conference;")
+        conference = self.choice.cursor.fetchall()
+        self.choice.close_connection
+        print(conference)
