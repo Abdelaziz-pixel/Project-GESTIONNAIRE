@@ -30,4 +30,9 @@ class Speaker():
         self.choice.close_connection()
 
     def read_speaker(self):
-        pass
+        self.choice.initialize_connection()
+        self.choice.cursor.execute("SELECT * FROM Speaker;")
+        speaker = self.choice.cursor.fetchall()
+        self.choice.close_connection
+        for key, value in enumerate(speaker):
+            speaker[key] = Speaker(value)

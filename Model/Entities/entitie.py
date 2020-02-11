@@ -1,7 +1,7 @@
 class Hydrate():
 
     def __init__(self):
-        pass
+        self.id = None
 
     def hydrate(self, data):
         for key, value in data.items():
