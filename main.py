@@ -1,7 +1,9 @@
 """import of speaker and conference classes from the Model folder
-    importation des classes speaker et conference depuis le dossier Model"""
+    importation des classes speaker, conference et entities depuis le dossier Model"""
 from Model.speaker import *
 from Model.conference import *
+from Model.Entities.entitie import *
+from Model.dislplay import *
 
 """script launch
     lancement du script"""
@@ -15,13 +17,15 @@ if __name__ == "__main__":
 
     """instantiation of the Speaker and Conference class
             instantiation de la class Speaker et Conference"""
+
     Choice=""
-    Speak = Speaker()
-    Conf = Conference()
+    display = Display()
+
     while Choice != 'q':
 
-    """presentation of the possible choices for the user
-            présentation des choix possible pour l'utilisateur"""
+        #presentation of the possible choices for the user
+        #présentation des choix possible pour l'utilisateur
+
         print("+-------- Action ----------|-------- Touche -------+")
         print("|     Créer un speaker     |          [P]          |")
         print("|   Supprimer un speaker   |          [Y]          |")
@@ -38,18 +42,18 @@ if __name__ == "__main__":
         """All possible actions by the user referring to a specific method
                 Toutes les actions possible par l'utilisateur renvoyant à une méthode précise"""
         if Choice == "P":
-            Speak.create_speaker()
+            display.create_speaker()
         if Choice == "Y":
-            Speak.delete_speaker()
+            display.delete_speaker()
         if Choice == "T":
-            Speak.read_speaker()
+            display.show_speak()
         if Choice == "H":
-            Conf.create_conference()
+            display.create_conference()
         if Choice == "O":
-            Conf.delete_conference()
+            display.delete_conference()
         if Choice == "N":
-            Conf.read_conference()
+            display.show_conference()
         if Choice == "Q":
             print("À bientôt pour une prochaine conférence ;-)")
             exit()
-            
+        
