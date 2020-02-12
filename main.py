@@ -3,27 +3,37 @@ from Model.conference import *
 
 if __name__ == "__main__":
     
+    print("+--------------------------------------------------+")
+    print("|---------- GESTIONNAIRE DES CONFERENCES ----------|")
+    print("+--------------------------------------------------+")
+
     Choice=""
     Speak = Speaker()
     Conf = Conference()
     while Choice != 'q':
-        print("Créer un speaker [C], Créer une conférence [A]")
-        print("Supprimer un speaker [D], Supprimer une conférence [S]")
-        print("Voir un speaker [V], Voir une conférence [B]")
+        print("+-------- Action ----------|-------- Touche -------+")
+        print("|     Créer un speaker     |          [P]          |")
+        print("|   Supprimer un speaker   |          [Y]          |")
+        print("|      Voir un speaker     |          [T]          |")
+        print("|   Créer une conférence   |          [H]          |")
+        print("| Supprimer une conférence |          [O]          |")
+        print("|   Voir une conférence    |          [N]          |")
+        print("+--------------------------------------------------+")
+
         Choice = input("Que souhaitez-vous faire ?").upper()
-        if Choice == "C":
+        if Choice == "P":
             Speak.create_speaker()
-        if Choice == "D":
+        if Choice == "Y":
             Speak.delete_speaker()
-        if Choice == "V":
+        if Choice == "T":
             Speak.read_speaker()
-        if Choice == "A":
+        if Choice == "H":
             Conf.create_conference()
-        if Choice == "S":
+        if Choice == "O":
             Conf.delete_conference()
-        if Choice == "B":
+        if Choice == "N":
             Conf.read_conference()
         if Choice == "Q":
-            print("À bientôt pour un prochain évènement ;-)")
+            print("À bientôt pour une prochaine conérence ;-)")
             exit()
             
