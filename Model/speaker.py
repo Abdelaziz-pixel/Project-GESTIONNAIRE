@@ -3,7 +3,7 @@
 from Model.connection import *
 
     """class speaker
-        class conférencier"""
+            class conférencier"""
 class Speaker():
     
     """Constructor containing the connection and attributes specific to the speaker
@@ -36,6 +36,7 @@ class Speaker():
         self.choice.cursor.execute("DELETE FROM Speaker WHERE prenom=%s AND nom=%s;",(self.prenom,self.nom))
         self.choice.connection.commit()
         self.choice.close_connection()
+        
     """Method for reading the speaker containing the necessary request
              Méthode pour la lecture du conférencier contenant la requête necessaire"""
     def read_speaker(self):
