@@ -7,6 +7,19 @@ class Display():
     def __init__(self):
         self.choice = connection()
 
+    def jointure(self):
+        self.choice.initialize_connection()
+        self.choice.cursor.execute("SELECT c.titre,c.resume,c.date_heure,c.speaker_id,c.id,s.prenom,s.nom,s.description,s.profession,s.statut FROM Conference AS c LEFT JOIN Speaker AS s ON c.speaker_id = s.id;")
+        self.choice.connection.commit()
+        rows = self.choice.cursor.fetchall()
+        self.choice.close_connection
+        liste = list()
+        for row in rows:
+            liste.append({'titre':row[0],'resume': row[1], 'date_heure':row[2],
+            'speaker_id':row[3],'id_c':row[4], 'prenom': row[5], 'nom':row[6], 'description':row[7], 'profession':row[8], 'statut':row[9] })
+        return liste
+
+
     """Method for creating the speaker containing the necessary query
              Méthode pour la création du conférencier contenant la requête necessaire"""
     def create_speaker(self):
@@ -56,8 +69,9 @@ class Display():
         self.jour = int(input("Quel jour: "))
         self.heure = int(input("À quel heure: "))
         self.minute = int(input("minutes: ")) 
+        self.speaker_id = int(input("Quel est votre id ? "))
         self.date_heure = datetime.datetime(datetime.date.today().year, self.mois,self.jour,self.heure,self.minute,0)
-        self.choice.cursor.execute("INSERT INTO Conference(titre, resume, date_heure) VALUES (%s, %s, %s)",(self.titre,self.resume,self.date_heure))
+        self.choice.cursor.execute("INSERT INTO Conference(titre, resume, date_heure, speaker_id) VALUES (%s, %s, %s, %s)",(self.titre,self.resume,self.date_heure,self.speaker_id))
         self.choice.connection.commit()
         self.choice.close_connection()
 
