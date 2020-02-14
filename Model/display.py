@@ -1,12 +1,16 @@
+"""import of the Connection, Speaker and Conference class
+    importation de la class Connection, Speaker et Conference"""
 from Model.connection import *
 from Model.speaker import *
 from Model.conference import *
 
 class Display():
-
+    """constructor containing the instant of the connection class
+        constructeur contenant l'instantion de la classe connection"""
     def __init__(self):
         self.choice = connection()
-
+    """allows to associate several tables in the same query
+         permetd'associer plusieurs tables dans une même requête"""
     def jointure(self):
         self.choice.initialize_connection()
         self.choice.cursor.execute("SELECT c.titre,c.resume,c.date_heure,c.speaker_id,s.speak_id,s.prenom,s.nom,s.description,s.profession,s.statut FROM Conference AS c LEFT JOIN Speaker AS s ON c.speaker_id = s.speak_id;")
