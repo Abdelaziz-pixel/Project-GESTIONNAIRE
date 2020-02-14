@@ -5,8 +5,8 @@ import datetime
 
 class Conference():
     
-    """Constructor containing the attributes specific to the Speaker as well as the hydrate method
-            Constructeur contenant les attributs propre au Speaker ainsi que la méthode hydrate"""
+    """Constructor containing the attributes specific to the Conference as well as the hydrate method
+            Constructeur contenant les attributs propre a la conference ainsi que la méthode hydrate"""
     def __init__(self, data):
         self.speak_id = None
         self.prenom = None
