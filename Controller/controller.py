@@ -8,7 +8,7 @@ from View.View_conf_speak import *
 class Controller():
 
     def Choice(self):
-    """instantiation of the Display and view class
+        """instantiation of the Display and view class
             instantiation de la class Diplay et View"""
         display = Display()
         view = View(display)
