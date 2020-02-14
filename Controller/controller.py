@@ -1,23 +1,15 @@
-"""import of speaker and conference classes from the Model folder
-    importation des classes speaker, conference et entities depuis le dossier Model"""
+"""import of speaker, conference, display and view classes
+    importation des classes speaker, conference, display et view"""
 from Model.speaker import *
 from Model.conference import *
-from Model.Entities.hydrate import *
 from Model.display import *
 from View.View_conf_speak import *
 
 class Controller():
 
-    """script launch
-        lancement du script"""
-
-    
+    def Choice(self):
     """instantiation of the Display and view class
             instantiation de la class Diplay et View"""
-    
-
-    def Choice(self):
-
         display = Display()
         view = View(display)
 
