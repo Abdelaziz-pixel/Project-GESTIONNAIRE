@@ -21,17 +21,39 @@ class View():
         print("+--------------------------------------------------+")
         print("|---------- GESTIONNAIRE DES CONFERENCES ----------|")
         print("+--------------------------------------------------+")
+        print("+--------------------------------------------------+")
+        print("|   Gérer les Conférences  |          [W]          |")
+        print("|     Gérer les Speaker    |          [K]          |")
+        print("+--------------------------------------------------+")
+        print("|   Quitter le programme   |          [R]          |")
+        print("+--------------------------------------------------+")
+
+
+    def lancement_speak(self):
+
+        print("+--------------------------------------------------+")
+        print("|----------- GESTIONNAIRE DES SPEAKERS ------------|")
+        print("+--------------------------------------------------+")
         print("+-------- Action ----------|-------- Touche -------+")
         print("|     Créer un speaker     |          [P]          |")
         print("|   Supprimer un speaker   |          [Y]          |")
         print("|      Voir un speaker     |          [T]          |")
+        print("+--------------------------------------------------+")
+        print("|      Menu principal      |          [Q]          |")
+        print("+--------------------------------------------------+")
+
+    def lancement_conf(self):
+
+        print("+--------------------------------------------------+")
+        print("|---------- GESTIONNAIRE DES CONFERENCES ----------|")
+        print("+--------------------------------------------------+")
+        print("+-------- Action ----------|-------- Touche -------+")
         print("|   Créer une conférence   |          [H]          |")
         print("| Supprimer une conférence |          [O]          |")
         print("|   Voir une conférence    |          [N]          |")
         print("+--------------------------------------------------+")
-        print("|  Quitter le proggramme   |          [Q]          |")
+        print("|      Menu principal      |          [Q]          |")
         print("+--------------------------------------------------+")
-
         
         
 
