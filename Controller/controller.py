@@ -11,15 +11,16 @@ class Controller():
     """script launch
         lancement du script"""
 
-# if __name__ == "__main__":
     
     """instantiation of the Display and view class
             instantiation de la class Diplay et View"""
     
 
     def Choice(self):
+
         display = Display()
         view = View(display)
+
         Choice=""
         while Choice != 'q':
 
