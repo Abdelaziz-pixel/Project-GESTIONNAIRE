@@ -17,7 +17,7 @@ class Speaker(Hydrate):
     """method to return the values in the form of a character string
         méthode permettant de retourner les valeurs sous forme de chaine de caractére"""
     def __str__(self):
-        return """ Id: {}\n Prénom: {}\n Nom: {}\n Profession: {}\n Description: {}\n Statut: {}\n~~~~~~~~~~~~~~~~~~~~~~~~~""".format(self.speak_id, self.prenom, self.nom, self.profession,self.description, self.statut)
+        return """\nId: {}\nPrénom: {}\nNom: {}\nProfession: {}\nDescription: {}\nStatut: {}""".format(self.speak_id, self.prenom, self.nom, self.profession,self.description, self.statut)
     
     
     

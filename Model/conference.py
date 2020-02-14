@@ -25,5 +25,5 @@ class Conference():
     """method to return the values in the form of a character string
         méthode permettant de retourner les valeurs sous forme de chaine de caractére"""
     def __str__(self):
-        return """\nTitre : {}\nResumé: {}\nDate et heure: {}\nspeak_id: {}\n Nom du speaker: {}\n Prénom du speaker: {}\n~~~~~~~~~~~~~~~~~~~~~~~~~""".format(self.titre, self.resume, self.date_heure, self.speak_id, self.nom, self.prenom)
+        return """\nTitre : {}\nResumé: {}\nDate et heure: {}\nspeak_id: {}\nNom du speaker: {}\nPrénom du speaker: {}\n~~~~~~~~~~~~~~~~~~~~~~~~~""".format(self.titre, self.resume, self.date_heure, self.speak_id, self.nom, self.prenom)
     
